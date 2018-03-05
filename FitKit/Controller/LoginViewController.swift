@@ -99,6 +99,7 @@ class LoginViewController: UIViewController {
     
     //MARK: Setup view constraints
     func setupViewConstraints() {
+        navigationItem.title = "Login"
         view.backgroundColor = UIColor("#50595C")
         view.addSubview(logoImage)
         view.addSubview(inputContainer)
@@ -107,6 +108,7 @@ class LoginViewController: UIViewController {
         inputContainer.addSubview(emailTextField)
         inputContainer.addSubview(passwordTextField)
         inputContainer.addSubview(inputSeparator)
+        loginButton.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
 
         inputContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         inputContainer.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
@@ -141,6 +143,39 @@ class LoginViewController: UIViewController {
         signupLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         signupLabel.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 10).isActive = true
         signupLabel.heightAnchor.constraint(equalToConstant: 10).isActive = true
+    }
+    
+    @objc func handleLogin() {
+        
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            DispatchQueue.global(qos: .background).async {
+                Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                    if error != nil {
+                        DispatchQueue.main.async {
+                            print(error!)
+                        }
+                    }
+                    else {
+                        DispatchQueue.main.async {
+                            let tabVC = UITabBarController()
+                            let workoutVC = WorkoutViewController()
+                            let calcVC = CalculatorViewController()
+
+                            workoutVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
+                            workoutVC.tabBarItem.badgeValue = "Workouts"
+                            
+                            calcVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+                            calcVC.tabBarItem.badgeValue = "Calculator"
+
+                            tabVC.viewControllers = [workoutVC, calcVC]
+                                
+                            self.navigationController?.pushViewController(tabVC, animated: true)
+                        }
+                    }
+                })
+            }
+        }
+        
     }
 }
 

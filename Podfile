@@ -9,5 +9,8 @@ target 'FitKit' do
 
 pod 'Firebase/Core'
 pod 'HexColors'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase'
 
 end

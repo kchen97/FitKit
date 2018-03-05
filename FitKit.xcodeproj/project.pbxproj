@@ -13,6 +13,8 @@
 		8E61EF94203F50BF008209DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E61EF92203F50BF008209DF /* Main.storyboard */; };
 		8E61EF96203F50BF008209DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E61EF95203F50BF008209DF /* Assets.xcassets */; };
 		8E61EF99203F50BF008209DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E61EF97203F50BF008209DF /* LaunchScreen.storyboard */; };
+		8E685CF32044D6EC00679FC0 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E685CF22044D6EC00679FC0 /* WorkoutViewController.swift */; };
+		8E685CF52044D6FC00679FC0 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E685CF42044D6FC00679FC0 /* CalculatorViewController.swift */; };
 		8ECD15F12043E793006BF9F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD15F02043E793006BF9F2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		8E61EF95203F50BF008209DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E61EF98203F50BF008209DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E61EF9A203F50BF008209DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E685CF22044D6EC00679FC0 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		8E685CF42044D6FC00679FC0 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		8ECD15F02043E793006BF9F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D195EB0CD9E8ED4AEEF6A4EC /* Pods-FitKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitKit/Pods-FitKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,8 @@
 			children = (
 				8E61EF8E203F50BF008209DF /* AppDelegate.swift */,
 				8E61EF90203F50BF008209DF /* LoginViewController.swift */,
+				8E685CF22044D6EC00679FC0 /* WorkoutViewController.swift */,
+				8E685CF42044D6FC00679FC0 /* CalculatorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,14 +200,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FitKit/Pods-FitKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,7 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E685CF32044D6EC00679FC0 /* WorkoutViewController.swift in Sources */,
 				8E61EF91203F50BF008209DF /* LoginViewController.swift in Sources */,
+				8E685CF52044D6FC00679FC0 /* CalculatorViewController.swift in Sources */,
 				8E61EF8F203F50BF008209DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
