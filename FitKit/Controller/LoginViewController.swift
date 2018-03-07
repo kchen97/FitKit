@@ -162,10 +162,10 @@ class LoginViewController: UIViewController {
                             let calcVC = CalculatorViewController()
 
                             workoutVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
-                            workoutVC.tabBarItem.badgeValue = "Workouts"
+                            workoutVC.tabBarItem.title = "Workouts"
                             
                             calcVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-                            calcVC.tabBarItem.badgeValue = "Calculator"
+                            calcVC.tabBarItem.title = "Calculator"
 
                             tabVC.viewControllers = [workoutVC, calcVC]
                                 
