@@ -147,6 +147,7 @@ class CalculatorViewController: UIViewController {
         
         view.addSubview(buttonContainer)
         view.addSubview(textFieldContainer)
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapToDismiss)))
         
         goalButtons.forEach { (button) in
             buttonContainer.addArrangedSubview(button)
@@ -175,7 +176,13 @@ class CalculatorViewController: UIViewController {
     @objc func handleSelect(sender: UIButton) {
         if sender != selectGoalButton {goalSelected = true}
         animate(uiArray: goalButtons)
+        shouldDisplayTextFields()
         print(goalSelected)
+    }
+    
+    @objc func handleTapToDismiss() {
+        view.endEditing(true)
+        shouldDisplayTextFields()
     }
     
     func animate(uiArray: [Any]) {
@@ -201,8 +208,10 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-}
-
-extension CalculatorViewController: UITextFieldDelegate {
+    func shouldDisplayTextFields() {
+        if goalSelected && !(caloriesTextField.text?.isEmpty)! && proteinTextField.isHidden {
+            animate(uiArray: textFields)
+        }
+    }
     
 }

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class WorkoutViewController: UIViewController {
+class WorkoutViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.register(WorkoutTableViewCell.self, forCellReuseIdentifier: "workoutCell")
         setup()
     }
 
@@ -23,6 +23,25 @@ class WorkoutViewController: UIViewController {
     
     func setup() {
         view.backgroundColor = UIColor.white
+        tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "workoutCell") as! WorkoutTableViewCell
+        cell.name.text = "Chest"
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     
+        return 3
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? WorkoutTableViewCell {
+            print(cell.name.text)
+        }
     }
 }
+
 

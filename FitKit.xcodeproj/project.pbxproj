@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		113A3112072B0916971E6F98 /* Pods_FitKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C39A2E9EE40EBEED64490CD /* Pods_FitKit.framework */; };
+		8E0EED1E205266DA00BA636B /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0EED1D205266DA00BA636B /* WorkoutTableViewCell.swift */; };
 		8E61EF8F203F50BF008209DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61EF8E203F50BF008209DF /* AppDelegate.swift */; };
 		8E61EF91203F50BF008209DF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61EF90203F50BF008209DF /* LoginViewController.swift */; };
 		8E61EF94203F50BF008209DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E61EF92203F50BF008209DF /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		1C39A2E9EE40EBEED64490CD /* Pods_FitKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DD34E6CDDBC54BC6F66489B /* Pods-FitKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitKit/Pods-FitKit.debug.xcconfig"; sourceTree = "<group>"; };
+		8E0EED1D205266DA00BA636B /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		8E61EF8B203F50BF008209DF /* FitKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E61EF8E203F50BF008209DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E61EF90203F50BF008209DF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				8E61EF90203F50BF008209DF /* LoginViewController.swift */,
 				8E685CF22044D6EC00679FC0 /* WorkoutViewController.swift */,
 				8E685CF42044D6FC00679FC0 /* CalculatorViewController.swift */,
+				8E0EED1D205266DA00BA636B /* WorkoutTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0EED1E205266DA00BA636B /* WorkoutTableViewCell.swift in Sources */,
 				8E685CF32044D6EC00679FC0 /* WorkoutViewController.swift in Sources */,
 				8E61EF91203F50BF008209DF /* LoginViewController.swift in Sources */,
 				8E685CF52044D6FC00679FC0 /* CalculatorViewController.swift in Sources */,

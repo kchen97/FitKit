@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
 //        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
-        window?.rootViewController = CalculatorViewController()
+        window?.rootViewController = WorkoutViewController()
         
         return true
     }
