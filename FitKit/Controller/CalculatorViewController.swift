@@ -135,15 +135,19 @@ class CalculatorViewController: UIViewController {
         navigationItem.title = "Calculator"
         view.backgroundColor = UIColor("#50595C")
         
-        goalButtons.append(selectGoalButton)
-        goalButtons.append(loseWeightButton)
-        goalButtons.append(maintainButton)
-        goalButtons.append(gainWeightButton)
+        goalButtons = [selectGoalButton, loseWeightButton, maintainButton, gainWeightButton]
         
-        textFields.append(caloriesTextField)
-        textFields.append(carbTextField)
-        textFields.append(proteinTextField)
-        textFields.append(fatTextField)
+//        goalButtons.append(selectGoalButton)
+//        goalButtons.append(loseWeightButton)
+//        goalButtons.append(maintainButton)
+//        goalButtons.append(gainWeightButton)
+        
+        textFields = [caloriesTextField, carbTextField, proteinTextField, fatTextField]
+        
+//        textFields.append(caloriesTextField)
+//        textFields.append(carbTextField)
+//        textFields.append(proteinTextField)
+//        textFields.append(fatTextField)
         
         view.addSubview(buttonContainer)
         view.addSubview(textFieldContainer)
@@ -175,7 +179,7 @@ class CalculatorViewController: UIViewController {
     
     @objc func handleSelect(sender: UIButton) {
         if sender != selectGoalButton {goalSelected = true}
-        animate(uiArray: goalButtons)
+        animate(goalButtons.filter {$0 != selectGoalButton})
         shouldDisplayTextFields()
         print(goalSelected)
     }
@@ -185,32 +189,28 @@ class CalculatorViewController: UIViewController {
         shouldDisplayTextFields()
     }
     
-    func animate(uiArray: [Any]) {
+    func animate(_ uiArray: [Any]) {
         if let buttonArray = uiArray as? [UIButton] {
             buttonArray.forEach({ (button) in
-                UIView.animate(withDuration: 0.44, delay: 0, options: .curveEaseIn, animations: {
-                    if button != self.selectGoalButton {
-                        button.isHidden = !button.isHidden
-                        self.view.layoutIfNeeded()
-                    }
-                }, completion: nil)
+                UIView.animate(withDuration: 0.44, animations: {
+                    button.isHidden = !button.isHidden
+                    self.view.layoutIfNeeded()
+                })
             })
         }
         else if let tfArray = uiArray as? [UITextField] {
             tfArray.forEach({ (tf) in
-                UIView.animate(withDuration: 0.44, delay: 0, options: .curveEaseIn, animations: {
-                    if tf != self.caloriesTextField {
-                        tf.isHidden = !tf.isHidden
-                        self.view.layoutIfNeeded()
-                    }
-                }, completion: nil)
+                UIView.animate(withDuration: 0.44, animations: {
+                    tf.isHidden = !tf.isHidden
+                    self.view.layoutIfNeeded()
+                })
             })
         }
     }
     
     func shouldDisplayTextFields() {
         if goalSelected && !(caloriesTextField.text?.isEmpty)! && proteinTextField.isHidden {
-            animate(uiArray: textFields)
+            animate(textFields.filter {$0 != caloriesTextField})
         }
     }
     
