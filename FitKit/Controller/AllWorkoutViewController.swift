@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Hero
 
-class WorkoutViewController: UITableViewController {
+class AllWorkoutViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,10 @@ class WorkoutViewController: UITableViewController {
     
     func setup() {
         view.backgroundColor = UIColor.white
-        tableView.reloadData()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = 100
+        navigationController?.navigationBar.isHidden = true
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,13 +37,16 @@ class WorkoutViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     
         return 3
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? WorkoutTableViewCell {
-            print(cell.name.text)
+            let workoutVC = WorkoutTableViewController()
+            workoutVC.currentWorkout = cell.workout
+            workoutVC.hero.modalAnimationType = .zoom
+//            navigationController?.hero.replaceViewController(with: workoutVC)
+            hero.replaceViewController(with: workoutVC)
         }
     }
 }

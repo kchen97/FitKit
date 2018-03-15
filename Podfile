@@ -12,5 +12,6 @@ pod 'HexColors'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase'
+pod 'Hero'
 
 end

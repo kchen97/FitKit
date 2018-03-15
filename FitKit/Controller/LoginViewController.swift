@@ -158,7 +158,7 @@ class LoginViewController: UIViewController {
                     else {
                         DispatchQueue.main.async {
                             let tabVC = UITabBarController()
-                            let workoutVC = WorkoutViewController()
+                            let workoutVC = AllWorkoutViewController()
                             let calcVC = CalculatorViewController()
 
                             workoutVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)

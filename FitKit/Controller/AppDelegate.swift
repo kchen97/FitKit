@@ -23,7 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
 //        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
-        window?.rootViewController = CalculatorViewController()
+//        let navController = UINavigationController(rootViewController: AllWorkoutViewController())
+//        navController.hero.isEnabled = true
+//        navController.hero.navigationAnimationType = .selectBy(presenting: .zoom, dismissing: .zoomOut)
+//        window?.rootViewController = navController
+        window?.rootViewController = AllWorkoutViewController()
         
         return true
     }
