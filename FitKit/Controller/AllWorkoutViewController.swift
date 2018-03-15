@@ -44,9 +44,9 @@ class AllWorkoutViewController: UITableViewController {
         if let cell = tableView.cellForRow(at: indexPath) as? WorkoutTableViewCell {
             let workoutVC = WorkoutTableViewController()
             workoutVC.currentWorkout = cell.workout
-            workoutVC.hero.modalAnimationType = .zoom
-//            navigationController?.hero.replaceViewController(with: workoutVC)
-            hero.replaceViewController(with: workoutVC)
+//            workoutVC.hero.modalAnimationType = .zoom
+//            hero.replaceViewController(with: workoutVC)
+            navigationController?.pushViewController(workoutVC, animated: true)
         }
     }
 }

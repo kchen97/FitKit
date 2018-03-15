@@ -21,7 +21,7 @@ class WorkoutTableViewController: UITableViewController {
         tableView.dataSource = self
     
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "someCell")
+        tableView.register(ExerciseCell.self, forCellReuseIdentifier: "exerciseCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,9 +41,7 @@ class WorkoutTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "someCell", for: indexPath)
-        cell.textLabel?.text = "Benchpress"
-        cell.detailTextLabel?.text = "test"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseCell", for: indexPath)
         
         return cell
     }
@@ -51,6 +49,8 @@ class WorkoutTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = AllWorkoutViewController()
         vc.hero.modalAnimationType = .zoomOut
-        hero.replaceViewController(with: vc)
+//        hero.replaceViewController(with: vc)
+//        navigationController?.hero.replaceViewController(with: vc)
+        navigationController?.popViewController(animated: true)
     }
 }

@@ -19,6 +19,7 @@
 		8EA966622059D6B500919079 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA966612059D6B500919079 /* Workout.swift */; };
 		8EA966642059D8AA00919079 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA966632059D8AA00919079 /* WorkoutTableViewController.swift */; };
 		8ECD15F12043E793006BF9F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD15F02043E793006BF9F2 /* GoogleService-Info.plist */; };
+		8EE289DD205AFE60009CC18B /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE289DC205AFE60009CC18B /* ExerciseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8EA966612059D6B500919079 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8EA966632059D8AA00919079 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		8ECD15F02043E793006BF9F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8EE289DC205AFE60009CC18B /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
 		D195EB0CD9E8ED4AEEF6A4EC /* Pods-FitKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitKit/Pods-FitKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 				8E685CF42044D6FC00679FC0 /* CalculatorViewController.swift */,
 				8E0EED1D205266DA00BA636B /* WorkoutTableViewCell.swift */,
 				8EA966632059D8AA00919079 /* WorkoutTableViewController.swift */,
+				8EE289DC205AFE60009CC18B /* ExerciseCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				8E61EF91203F50BF008209DF /* LoginViewController.swift in Sources */,
 				8E685CF52044D6FC00679FC0 /* CalculatorViewController.swift in Sources */,
 				8E61EF8F203F50BF008209DF /* AppDelegate.swift in Sources */,
+				8EE289DD205AFE60009CC18B /* ExerciseCell.swift in Sources */,
 				8EA966622059D6B500919079 /* Workout.swift in Sources */,
 				8EA966642059D8AA00919079 /* WorkoutTableViewController.swift in Sources */,
 			);
